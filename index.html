@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@ body {
   100% {background-position: 0% 50%;}
 }
 
-/* نجوم */
+/* النجوم */
 .stars {
   position: fixed;
   width: 100%;
@@ -31,6 +31,8 @@ body {
   background-size: 40px 40px;
   animation: moveStars 60s linear infinite;
   opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes moveStars {
@@ -38,9 +40,10 @@ body {
   to {background-position: 1000px 1000px;}
 }
 
-/* محتوى */
 .container {
   margin-top: 80px;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
@@ -58,19 +61,13 @@ h1 {
   text-decoration: none;
   font-size: 16px;
   transition: 0.3s;
+  color: white;
 }
 
-.whatsapp {
-  background: #25D366;
-}
-
-.telegram {
-  background: #0088cc;
-}
-
-.tiktok {
-  background: #ff0050;
-}
+.whatsapp { background: #25D366; }
+.telegram { background: #0088cc; }
+.tiktok { background: #ff0050; }
+.discord { background: #5865F2; }
 
 .btn:hover {
   transform: scale(1.1);
@@ -89,16 +86,28 @@ h1 {
   border-radius: 15px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 20px rgba(128,0,255,0.3);
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: scale(1.05);
 }
 
 .card a {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background: #0088cc;
+  background: #25D366;
   color: white;
   border-radius: 10px;
   text-decoration: none;
+}
+
+/* فوتر */
+.footer{
+margin-top:40px;
+padding:20px;
+opacity:0.7;
 }
 </style>
 </head>
@@ -112,26 +121,31 @@ h1 {
   <p>بيع حسابات Blox Fruits و Bounty Rush</p>
 
   <!-- الأزرار -->
-  <a href="https://wa.me/966562585336" target="_blank" class="btn whatsapp">💬 واتساب</a>
+  <a href="https://wa.me/966562585336?text=مرحبا%20ابغى%20اطلب" target="_blank" class="btn whatsapp">💬 واتساب</a>
   <a href="https://t.me/+CEsvry-8hAgxNWRk" target="_blank" class="btn telegram">🚀 تلغرام</a>
-  <a href="https://tiktok.com/@realm_33" target="_blank" class="btn tiktok">🎵 تيك توك</a>
+  <a href="https://www.tiktok.com/@realm_33" target="_blank" class="btn tiktok">🎵 تيك توك</a>
+  <a href="https://discord.gg/SkJMBp96p" target="_blank" class="btn discord">💬 دسكورد</a>
 
   <!-- الحسابات -->
   <div class="accounts">
     <h2>🔥 الحسابات المتوفرة</h2>
 
     <div class="card">
-      <h3>حساب Blox Fruits</h3>
+      <h3>🔥 حساب Blox Fruits 🔥</h3>
       <p>لفل عالي + فواكه نادرة</p>
-      <a href="https://t.me/+CEsvry-8hAgxNWRk" target="_blank">📲 اطلب من التلغرام</a>
+      <a href="https://wa.me/966562585336?text=ابغى%20حساب%20بلوكس%20فروت" target="_blank">📲 اطلب الآن</a>
     </div>
 
     <div class="card">
-      <h3>حساب Bounty Rush</h3>
+      <h3>⚡ حساب Bounty Rush ⚡</h3>
       <p>شخصيات قوية + حساب جاهز</p>
-      <a href="https://t.me/+CEsvry-8hAgxNWRk" target="_blank">📲 اطلب من التلغرام</a>
+      <a href="https://wa.me/966562585336?text=ابغى%20حساب%20بونتي%20راش" target="_blank">📲 اطلب الآن</a>
     </div>
 
+  </div>
+
+  <div class="footer">
+    💳 STC Pay: 056 258 5336
   </div>
 
 </div>
